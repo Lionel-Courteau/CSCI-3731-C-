@@ -1,0 +1,1 @@
+unsigned char* readPPM(const char* fileName, char* pSix, int* width, int* height, int* maximum);
