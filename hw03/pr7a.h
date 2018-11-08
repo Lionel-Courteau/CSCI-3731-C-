@@ -1,4 +1,4 @@
-#include <lcourtea>
+#include <iostream>
 FILE* fp = fopen("filename", "r"); 
 int value; 
 while(fscanf(fp, "%d", value) != EOF) { 
