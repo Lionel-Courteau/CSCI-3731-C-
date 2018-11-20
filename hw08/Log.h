@@ -10,5 +10,7 @@ class Log{
 	
 	public:
 		static const Log& getInstance();
-		void print(const std::string& message);
-}
+		Log::~Log();
+		void print(const std::string& nameLog);
+};
+#endif

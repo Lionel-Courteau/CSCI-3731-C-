@@ -7,13 +7,15 @@
 class Population{
 	private:
 		Fish** fishes;
-		int nFish;
+		
 		int maxFish;
+		int size;
 	
 	public:
-		void add(Fish* fish);
-		void remove(Fish* fish);
-		int size() const;
-		Fish* get(int i);
+		void add(Fish* f);
+		void remove(Fish* f);
+		int getSize() const;
+		Fish* get(int index) const;
+		Population::~Population();
 };
 #endif

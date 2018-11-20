@@ -1,31 +1,39 @@
 #include "Angle.h"
 #include <cstudio>
-#include <math.h>
+#include <cmath>
 
-
-
-Angle::set_d(double d){
-	d = d -int(d/360)*360.0
-	if(d<0) d += 360.0;
-	this->d=d;
+Angle::Angle(double d){
+	this->d = d;
 }
 
-double Angle::get_d() const{
+Angle::~Angle{
+	
+}
+
+double Angle::getD() const{
 	return d;
 }
 
-void Angle::set_d(double d){
+void Angle::setD(double d){
 	d = d -int(d/360)*360.0
 	if(d<0) d += 360.0;
 	this->d=d;
 }
 
-double Angle::get_sin() const{
-	return sin(d*M PI/180.0);
+double Angle::getSin() const{
+	if(!haveSin){
+		sin_val = d*M_PI/180.0;
+		haveSin = true;
+	}
+	return sin_val;
 }
 
-double Angle::get_cos() const{
-	return cos(d*M PI/180.0);
+double Angle::getCos() const{
+	if(!haveCos){
+		cos_val = d*M_PI/180.0;
+		haveCos = true;
+	}
+	return cos_val;
 }
 
 Angle::operator+ (const Angle& x) const{
@@ -53,25 +61,18 @@ Angle::operator/ (const Angle& x) const{
 }
 
 Angle::operator+= (const Angle& x){
-	Angle value;
-	value.set_d(d+=x);
-	return value;
+	this->d += x;
 }
 
 Angle::operator-= (const Angle& x){
-	Angle value;
-	value.set_d(d-=x);
-	return value;
+	this->d -= x;
 }
 
 Angle::operator*= (const Angle& x){
-	Angle value;
-	value.set_d(d*=x);
-	return value;
+	this->d *= x;
 }
 
 Angle::operator/= (const Angle& x){
-	Angle value;
-	value.set_d(d/=x);
-	return value;
+	this->d /= x;
 }
+

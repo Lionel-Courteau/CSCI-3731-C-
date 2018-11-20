@@ -1,9 +1,8 @@
-#ifndef LOG_H
-#define LOG_H
+#include <iostream>
+#include "Log.h"
 
-class Log{
-	printf(const std::string& messode);
-	static log& getInstance();
+Log::Log(){
+	
 }
 
 const Log& Log::getInstance(){
@@ -11,4 +10,10 @@ const Log& Log::getInstance(){
 	return instance;
 }
 
-void 
+Log::~Log(){
+	
+}
+
+void Log::print(const std::string& nameLog) const{
+	std::cout <<nameLog<< std::endl;
+}
