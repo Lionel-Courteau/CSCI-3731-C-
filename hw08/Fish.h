@@ -1,7 +1,5 @@
 #ifndef FISH_H
 #define FISH_H
-
-
 #include "Angle.h"
 #include <iostream>
 
@@ -15,7 +13,7 @@ class Fish{
 		
 		
 	public:
-		Fish(double x, double y, double speed, Angle direction);
+		Fish(double x, double y, double speed);
 		virtual ~Fish();
 		Swim();
 		

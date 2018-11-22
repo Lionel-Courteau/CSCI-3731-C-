@@ -14,6 +14,6 @@ Log::~Log(){
 	
 }
 
-void Log::print(const std::string& nameLog) const{
+void Log::print(const std::string& nameLog){
 	std::cout <<nameLog<< std::endl;
 }

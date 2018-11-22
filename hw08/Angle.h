@@ -14,10 +14,11 @@ private:
 	
 public:
 	
+	Angle();
 	Angle(double d);
 	virtual ~Angle();
 	
-	double getD();
+	double getD() const;
 	void setD(double d);
 	
 	double getSin() const;

@@ -12,10 +12,11 @@ class Population{
 		int size;
 	
 	public:
+		Population(int nFish);
 		void add(Fish* f);
 		void remove(Fish* f);
 		int getSize() const;
 		Fish* get(int index) const;
-		Population::~Population();
+		~Population();
 };
 #endif
